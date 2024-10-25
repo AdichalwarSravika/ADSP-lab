@@ -1,0 +1,16 @@
+def isort(l):
+    n=len(l)
+    for i in range(1,n):
+        t=l[i]
+        j=i-1
+        while j>=0 and l[j]>t:
+            l[j+1] =l[j]
+            j=j-1
+            l[j+1]=t
+l=[]
+n=int(input("Enter number "))
+for i in range(n):
+    e=int(input("element is"))
+    l.append(e)
+isort(l)
+print(l) 
