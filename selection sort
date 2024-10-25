@@ -1,0 +1,18 @@
+def ssort(l):
+    n=len(l)
+    for i in range(n-1):
+        mi=i
+        me=l[i]
+        for j in range(i+1,n):
+            if l[j]<me:
+                me=l[j] 
+                mi=j
+                if i!=mi:
+                    l[i],l[mi]=l[mi],l[i]
+l=[]
+n=int(input("Enter number "))
+for i in range(n):
+    e=int(input("element is"))
+    l.append(e)
+ssort(l)
+print(l) 
